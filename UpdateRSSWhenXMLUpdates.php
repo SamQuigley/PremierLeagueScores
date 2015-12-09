@@ -1,34 +1,5 @@
 <?php
 
-//Load the xml file
-$xml = new DOMDocument;
-$xml -> load('xml/PL.xml');
-$xsl = new DOMDocument;
-$xsl -> subsituteEntities = true;
-$xsl -> load('index.xsl');
-
-//configure the transformer 
-$proc = new XSLTProcessor;
-$proc -> importStyleSheet($xsl); //attach the xsl rules
-
-echo $proc -> transformToXML($xml);
-
-
-//Load the xml file
-$xml = new DOMDocument;
-$xml -> load('RSS/RssTest.xml');
-$xsl = new DOMDocument;
-$xsl -> subsituteEntities = true;
-$xsl -> load('RSS/RssXsl.xsl');
-
-//configure the transformer 
-$proc = new XSLTProcessor;
-$proc -> importStyleSheet($xsl); //attach the xsl rules
-
-echo $proc -> transformToXML($xml);
-?>
-<?php
-
 /*
  * PHP SimpleXML
  * Loading a XML from a file, adding new elements and editing elements
@@ -66,17 +37,18 @@ if (file_exists('RSS/RssTest.xml')) {
     //changing the nodes values
     //in this case we are changing the value 
     //of all children called <name>
-   
     foreach ($xml->children() as $child)
-        $child->homeTeam = " ";
+        $child->match = "CHANGED";
+    foreach ($xml->children() as $child)
+        $child->homeTeam = "CHANGED";
         foreach ($xml->children() as $child)
-        $child->awayTeam = " ";
+        $child->awayTeam = "CHANGED";
     //displaying the element in proper format
     echo '<br /><u><b>This is the xml code from books.xml with all genre changed:</b></u>
      <br /><br />
      <pre>' . htmlentities($xml->asXML(), ENT_COMPAT | ENT_HTML401, "ISO-8859-1") . '</pre>';
 } else {
-    exit('Failed to open RssTestL.xml.');
+    exit('Failed to open PL.xml.');
 }
     file_put_contents('RSS/RssTest.xml', $xml->asXML());
     
@@ -84,8 +56,8 @@ if (file_exists('RSS/RssTest.xml')) {
     function writeRSS(){
         if (file_exists('RSS/RssTest.xml')) {
             //loads the xml and returns a simplexml object
-            $rssxml = simplexml_load_file('RSS/RssTest.xml');
-            $newChild = $rssxml->channel->addChild('item');
+            $rssxml = simplexml_load_file('UpdateRSSWhenXMLUpdates.php');
+            $newChild = $xml->addChild('match');
             $newChild->addChild('homeTeam');
             $newChild->addChild('awayTeam');
             $newChild->addChild('date');

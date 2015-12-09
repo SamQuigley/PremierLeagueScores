@@ -8,47 +8,19 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet"/> 
 		<link href="css/custom.css" rel="stylesheet"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- <script src="js/bootstrap.js"></script> -->
-	    <script src="js/buttonScript.js"></script>
-	    
+		<script src="js/bootstrap.js"></script>
+		<script src="js/buttonScript.js"></script>
+		<script src="js/jquery.bxslider/plugins/jquery.easing.1.3.js"></script>
     </head>
  <body>
       
         <div id="banner">
             <img src="img/PL_Banner.png" class="img-responsive" alt="Premier League Banner"/>
         </div>
-      <!-- OLD NAVBAR
-      <div class="navbar navbar-static-top">
-            <div class="container">
-                <a href="#" class="pull-left"><img src="img/PL_Banner.png" width="1366px" height="250px"/></a>
-                    
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-        </div>
-    </div>
-
-                  <div class="collapse navbar-collapse navHeaderCollapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#">Home</a></li> 
-                            <li><a href="#">Blog</a></li> 
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Twitter</a></li>
-                                        <li><a href="#">Facebook</a></li>
-                                        <li><a href="#">LinkedIn</a></li>
-                                    </ul>     
-                            </li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li> 
-                        </ul>
-                    </div> -->
-        
+      
         <div class="container">
             <div class="col-md-6">
+                <div id="fixturesDiv">
             <button  id="Btn1" class="btn btn-primary" type="button">Week 1 Results</button><br /><br />
             <table id="week1" class="table table-responsive table-hover table-condensed">
 
@@ -73,7 +45,7 @@
 
 
             <button id="Btn2" class="btn btn-primary" type="button">Week 2 Results</button><br /><br />
-            <table id="week2" border=".5" class="table table-bordered">
+            <table id="week2"  class="table table-responsive table-hover table-condensed">
 
             <tr bgcolor="#9acd32">
                 <th style="text-align:left">Date</th>
@@ -93,7 +65,7 @@
             </table>
 
             <button id="Btn3" class="btn btn-primary" type="button">Week 3 Results</button><br /><br />
-            <table id="week3" border=".5" class="table table-bordered">
+            <table id="week3"  class="table table-responsive table-hover table-condensed">
 
             <tr bgcolor="#9acd32">
                 <th style="text-align:left">Date</th>
@@ -114,7 +86,7 @@
 
 
             <button id="Btn4" class="btn btn-primary" type="button">Week 4 Results</button><br /><br />
-            <table id="week4" border=".5" class="table table-bordered">
+            <table id="week4"  class="table table-responsive table-hover table-condensed">
 
             <tr bgcolor="#9acd32">
                 <th style="text-align:left">Date</th>
@@ -135,7 +107,7 @@
 
 
             <button id="Btn5" class="btn btn-primary" type="button">Week 5 Results</button><br /><br />
-            <table id="week5" border=".5" class="table table-bordered">
+            <table id="week5"  class="table table-responsive table-hover table-condensed">
 
             <tr bgcolor="#9acd32">
                 <th style="text-align:left">Date</th>
@@ -155,7 +127,7 @@
             </table>
 
             <button id="Btn6" class="btn btn-primary" type="button">Week 6 Results</button><br /><br />
-            <table id="week6" border=".5" class="table table-bordered">
+            <table id="week6"  class="table table-responsive table-hover table-condensed">
 
             <tr bgcolor="#9acd32">
                 <th style="text-align:left">Date</th>
@@ -176,7 +148,7 @@
 
 
             <button id="Btn7" class="btn btn-primary" type="button">Week 7 Results</button><br /><br />
-            <table id="week7" border=".5" class="table table-bordered">
+            <table id="week7"  class="table table-responsive table-hover table-condensed">
 
             <tr bgcolor="#9acd32">
                 <th style="text-align:left">Date</th>
@@ -196,7 +168,7 @@
             </table>
 
            <button id="Btn8" class="btn btn-primary" type="button">Week 8 Results</button><br /><br />
-            <table id="week8" border=".5" class="table table-bordered">
+            <table id="week8"  class="table table-responsive table-hover table-condensed">
 
             <tr bgcolor="#9acd32">
                 <th style="text-align:left">Date</th>
@@ -377,62 +349,55 @@
             </tr>
             </xsl:for-each>
             </table>
+            </div>
             
-
+                <br/>
+                
+                
+                
+                
             </div>
-            <div id="updateFormDiv" class="col-md-6">
-                <form action="index.php" method="post" class="form-inline">
-                    <div class="form-group">
-                         <input type="text" class="form-control" name="homeTeam" placeholder="Home Team">
-                         </input>
-                    </div>
-                </form>
-                <form class="form-inline">
-                    <div class="form-group">
-                         <input type="text" class="form-control" name="awayTeam" placeholder="Away Team">
-                         </input>
-                    </div>
-                </form>
-                <form class="form-inline">
-                    <div class="form-group">
-                         <input type="date" class="form-control" name="date" placeholder="Date">
-                         </input>
-                    </div>
-                </form>
-                <form class="form-inline">
-                    <div class="form-group">
-                         <input type="text" class="form-control" id="homeTeamGoals" placeholder="Home Team Goals">
-                         </input>
-                    </div>
-                </form>
-                
-                <form class="form-inline">
-                    <div class="form-group">
-                         <input type="text" class="form-control" id="awayTeamGoals" placeholder="Away Team Goals">
-                         </input>
-                    </div>
-                
-                <input type="submit" value="Add Result" id="submitBtn" class="btn btn-primary"/>
-                </form>
-           </div>
-           
-          
+        <div class="col-md-6">
+            <div id="slideshow">
+            <h1>jquery slideshow</h1>
+            </div>
+            <br/>
+            <div id="updateFormDiv">
+                    <form id="newMatchForm" action="updateXml.php" method="post" class="form-inline">
+                        <input type="text" class="form-control" name="gameWeek" placeholder="Gameweek" id="W16">
+                        </input>
 
-        
-           <!-- <div id="rss">
-                https://preview.c9users.io/charford/ria/RSS/RssTest.xml?_c9_id=livepreview2&_c9_host=https://ide.c9.io -->
-                <!-- <a href="RSS/RssTest.xml">
-                <img src="http://www-prod-storage.cloud.caltech.edu.s3.amazonaws.com/RSS_button_1021.png" width="50" height="50"/>
-                Subscribe to What's New!
-                </a>
-            </div> -->
-        </div>
-        
-             <div class="navbar navbar-inverse navbar-default navbar-fixed-bottom">
-                <div class="container">
-                    <p class="navbar-text pull-left">Created by Sam Quigley, Cian Harford &amp; Mateusz Matuszczyk.</p>
+                        <input type="text" class="form-control" name="homeTeam" placeholder="Home Team">
+                        </input>
+
+                        <input type="text" class="form-control" name="awayTeam" placeholder="Away Team">
+                        </input>
+
+                        <input type="date" class="form-control" name="date" placeholder="Date">
+                        </input>
+
+                        <input type="text" class="form-control" name="homeTeamGoals" placeholder="Home Team Goals">
+                        </input>
+
+                        <input type="text" class="form-control" name="awayTeamGoals" placeholder="Away Team Goals">
+                        </input>
+                
+                        <input type="submit" value="Add Result" id="submitBtn" class="btn btn-primary"/>
+                    </form>
                 </div>
-            </div>
+        </div>
+               <div id="rss">
+                    <!--https://preview.c9users.io/charford/ria/RSS/RssTest.xml?_c9_id=livepreview2&_c9_host=https://ide.c9.io -->
+                    <a href="RSS/RssTest.xml">
+                    <img src="http://www-prod-storage.cloud.caltech.edu.s3.amazonaws.com/RSS_button_1021.png" width="50" height="50"/>
+                    Subscribe to What's New!
+                    </a>
+                </div> 
+        </div> <!--close container div-->
+        
+             <!--   <div class="navbar navbar-inverse navbar-default navbar-fixed-bottom">
+                    <p class="navbar-text pull-left">Created by Sam Quigley, Cian Harford &amp; Mateusz Matuszczyk.</p>
+                    </div> -->
     </body>
 </html>
 </xsl:template>

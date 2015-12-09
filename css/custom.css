@@ -1,6 +1,40 @@
 #submitBtn{
     display:block;
 margin-top:1%;
-margin-left:10%;
 }
 
+table{
+    background-color:white;
+    border: 0 solid black;
+}
+#updateFormDiv{
+     width:100%;
+    border-radius:10px;
+    padding:5%;
+    background-color:#99ccff;
+    display:inline-block;
+}
+
+
+#fixturesDiv{
+    width:100%;
+    border-radius:10px;
+    padding:5%;
+    background-color:#99ccff;
+    
+}
+.btn{
+    width:50%;
+    margin-left:25%;
+}
+#slideshow{
+    padding:5%;
+    border-radius:10px;
+    background-color:#99ccff;
+
+
+}
+#rightColumn{
+    padding:5%;
+    width:50%;
+}

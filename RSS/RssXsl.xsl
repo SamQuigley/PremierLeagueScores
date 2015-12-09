@@ -13,9 +13,6 @@
     <body>
         <div id="logo">
             <xsl:element name="a">
-                <xsl:attribute name="href">
-                    <xsl:value-of select="channel/link" />
-                </xsl:attribute>
                 <xsl:value-of select="channel/title" />
             </xsl:element>
         </div>
@@ -35,7 +32,6 @@
                     </dd>
                     <dt>
                         <xsl:value-of select="description" /><br />
-                        <span class="comments"><xsl:value-of select="pubDate" /></span>
                     </dt>
                 </xsl:for-each>
             </dl>
