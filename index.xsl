@@ -432,6 +432,12 @@
              <!--<div class="navbar navbar-inverse navbar-default navbar-fixed-bottom">
                     <p class="navbar-text pull-left">Created by Sam Quigley, Cian Harford &amp; Mateusz Matuszczyk.</p>
                 </div> -->
+                
+                <div id="iframe">
+                    <iframe src="RSS/rss.php" height="350px" width="550px" allowfullscreen="" frameborder="2">
+
+</iframe>
+                </div>
     </div>
     </body>
 </html>
