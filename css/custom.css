@@ -2,39 +2,94 @@
     display:block;
 margin-top:1%;
 }
+#banner #bannerPNG{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 
 table{
     background-color:white;
     border: 0 solid black;
 }
+#background{
+    width:100%;
+    background-image: url("/img/grass.png");
+    background-repeat: repeat-x repeat-y;
+    opacity:0.9;
+}
+
+#iframe{
+    background-color:#99ccff;
+    display:block;
+    margin: 0 auto;
+}
+
 #updateFormDiv{
-     width:100%;
+    width:100%;
     border-radius:10px;
     padding:5%;
     background-color:#99ccff;
     display:inline-block;
 }
 
+img{
+    margin-left:20%;
+    border-radius:20px;
+    padding:5px;
+}
 
 #fixturesDiv{
     width:100%;
     border-radius:10px;
     padding:5%;
+    margin-left:1%;
     background-color:#99ccff;
     
 }
+th{
+    color:white;
+}
 .btn{
-    width:50%;
-    margin-left:25%;
+    font-weight:bold;
+    font-size:2.2em;
+    width:70%;
+    margin-left:15%;
+}
+.btn:hover { 
+    background-color: #9acd32;
+    border-color:#9acd32;
+}
+
+ol{    
+    
+    list-style-type:none;
 }
 #slideshow{
-    padding:5%;
+    padding-right:20px;
+    padding-top:5%;
+    padding-bottom:4%;
     border-radius:10px;
     background-color:#99ccff;
-
-
+}
+.teamBox{
+    float:left;
+    margin:auto;
+    width:43.5%;
 }
 #rightColumn{
     padding:5%;
     width:50%;
 }
+form{
+    margin-left:10%;
+}
+h2{
+    font-weight:bold;
+    text-align:center;
+    color:#000066;
+    font-family: Verdana, serif;
+    margin-bottom:5%;
+}
+

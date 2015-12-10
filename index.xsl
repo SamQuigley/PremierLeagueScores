@@ -10,17 +10,22 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/buttonScript.js"></script>
-		<script src="js/jquery.bxslider/plugins/jquery.easing.1.3.js"></script>
+        
+        
     </head>
+ 
+ <!-- START OF BODY -->
  <body>
-      
+      <div id="background">
         <div id="banner">
-            <img src="img/PL_Banner.png" class="img-responsive" alt="Premier League Banner"/>
+            
+            <img style="border-radius:0px;" src="img/PL_Banner.png" id="bannerPNG"  alt="Premier League Banner"/>
         </div>
-      
-        <div class="container">
+            <div class="container">
+        
             <div class="col-md-6">
                 <div id="fixturesDiv">
+                    <h2> Premier League Season 2015/2016</h2>
             <button  id="Btn1" class="btn btn-primary" type="button">Week 1 Results</button><br /><br />
             <table id="week1" class="table table-responsive table-hover table-condensed">
 
@@ -352,32 +357,60 @@
             </div>
             
                 <br/>
-                
-                
-                
-                
             </div>
         <div class="col-md-6">
             <div id="slideshow">
-            <h1>jquery slideshow</h1>
-            </div>
+            	
+            	  
+            		    <div id="astonvilla" class="teamBox">
+            		        <a href="http://www.avfc.co.uk/">
+            		            <img class="img-responsive" src="img/badges/astonvilla.png" id="opener" alt="Aston Villa Badge"/>
+                            </a>
+            		    </div>
+            		    <div id="arsenal" class="teamBox">
+            		        <a href="http://www.arsenal.com/">
+            		        <img class="img-responsive" src="img/badges/arsenal.png" alt="Arsenal Badge"/>
+            		        </a>
+            		    </div>
+            		   
+            		    <div id="bournemouth" class="teamBox">
+            		        <a href="http://bournemouth.co.uk/">
+            		        <img class="img-responsive" src="img/badges/bournemouth.png" alt="Bournemouth Badge"/>
+            		        </a>
+            		    </div>
+            	    
+            		    <div id="chelsea" class="teamBox">
+            		        <a href="https://www.chelseafc.com/">
+            		        <img class="img-responsive" src="img/badges/chelsea.png" alt="Chelsea Badge"/>
+            		        </a>
+            		    </div>
+            	
+            	
+            <div class="spacer" style="clear: both;"></div>
+            
+            </div> 
+            
             <br/>
             <div id="updateFormDiv">
                     <form id="newMatchForm" action="updateXml.php" method="post" class="form-inline">
                         <input type="text" class="form-control" name="gameWeek" placeholder="Gameweek" id="W16">
                         </input>
+                        
+                         <input type="date" class="form-control" name="date" placeholder="Date">
+                        </input>
 
                         <input type="text" class="form-control" name="homeTeam" placeholder="Home Team">
                         </input>
-
+                        
+                        <input type="text" class="form-control" name="homeTeamGoals" placeholder="Home Team Goals">
+                        </input>
+                        
                         <input type="text" class="form-control" name="awayTeam" placeholder="Away Team">
                         </input>
 
-                        <input type="date" class="form-control" name="date" placeholder="Date">
-                        </input>
+                       
 
-                        <input type="text" class="form-control" name="homeTeamGoals" placeholder="Home Team Goals">
-                        </input>
+                        
 
                         <input type="text" class="form-control" name="awayTeamGoals" placeholder="Away Team Goals">
                         </input>
@@ -386,18 +419,20 @@
                     </form>
                 </div>
         </div>
-               <div id="rss">
+            </div>    
+
+       
+       <div id="rss">
                     <!--https://preview.c9users.io/charford/ria/RSS/RssTest.xml?_c9_id=livepreview2&_c9_host=https://ide.c9.io -->
                     <a href="RSS/RssTest.xml">
                     <img src="http://www-prod-storage.cloud.caltech.edu.s3.amazonaws.com/RSS_button_1021.png" width="50" height="50"/>
-                    Subscribe to What's New!
+                    
                     </a>
-                </div> 
-        </div> <!--close container div-->
-        
-             <!--   <div class="navbar navbar-inverse navbar-default navbar-fixed-bottom">
+                </div>
+             <!--<div class="navbar navbar-inverse navbar-default navbar-fixed-bottom">
                     <p class="navbar-text pull-left">Created by Sam Quigley, Cian Harford &amp; Mateusz Matuszczyk.</p>
-                    </div> -->
+                </div> -->
+    </div>
     </body>
 </html>
 </xsl:template>
