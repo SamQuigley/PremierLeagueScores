@@ -393,26 +393,23 @@
             <br/>
             <div id="updateFormDiv">
                     <form id="newMatchForm" action="updateXml.php" method="post" class="form-inline">
-                        <input type="text" class="form-control" name="gameWeek" placeholder="Gameweek" id="W16">
+                        <input type="text" class="form-control" name="gameWeek" maxlength="2" placeholder="Gameweek" id="W16" required="">
                         </input>
                         
-                         <input type="date" class="form-control" name="date" placeholder="Date">
+                         <input type="date" class="form-control" name="date" placeholder="Date" required="">
                         </input>
 
-                        <input type="text" class="form-control" name="homeTeam" placeholder="Home Team">
+                        <input type="text" class="form-control" name="homeTeam" maxlength="15" placeholder="Home Team" required="">
                         </input>
                         
-                        <input type="text" class="form-control" name="homeTeamGoals" placeholder="Home Team Goals">
+                        <input type="number" class="form-control" name="homeTeamGoals" maxlength="2" placeholder="Home Team Goals" required="">
                         </input>
                         
-                        <input type="text" class="form-control" name="awayTeam" placeholder="Away Team">
+                        <input type="text" class="form-control" name="awayTeam" maxlength="15" placeholder="Away Team" required="">
                         </input>
 
                        
-
-                        
-
-                        <input type="text" class="form-control" name="awayTeamGoals" placeholder="Away Team Goals">
+                        <input type="number" class="form-control" name="awayTeamGoals" maxlength="2" placeholder="Away Team Goals"  required="">
                         </input>
                 
                         <input type="submit" value="Add Result" id="submitBtn" class="btn btn-primary"/>
